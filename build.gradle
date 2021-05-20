@@ -28,6 +28,11 @@ buildscript {
     }
 }
 
+plugins {
+    id 'org.sonarqube' version '2.8'
+    id 'jacoco'
+}
+
 allprojects {
     addRepos(repositories)
 }
@@ -42,9 +47,4 @@ sonarqube {
     property 'sonar.organization', 'adelina609'
     property 'sonar.projectKey', 'Adelina609_view-binding-sample'
   }
-}
-
-plugins {
-    id 'org.sonarqube' version '2.8'
-    id 'jacoco'
 }
